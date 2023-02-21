@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from starlette.responses import RedirectResponse
-from .routers import user
+from .routers import user, todo, auth
 from . import models
 from .database import engine
 
@@ -22,6 +22,8 @@ app.add_middleware(
 models.Base.metadata.create_all(bind=engine)
 
 app.include_router(user.router)
+app.include_router(todo.router)
+app.include_router(auth.router)
 
 
 
