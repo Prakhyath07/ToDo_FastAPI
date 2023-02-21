@@ -9,3 +9,5 @@ A To Do app using Fast API Frame Work
 4) Install the requirements : pip install -r requirements.txt
 5) In the app/constants.py update your MySQL username, database and password (Ideally create .env file to store these constants)
 6) Run the app: uvicorn app.main:app --reload
+7) Open the Localhost link and register yourself as a user
+8) Then login to use all the CRUD operations of ToDo app.
